@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.UserPage">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="userPage_title"
+                Text="Add and Register a User to the System!"
+                FontSize="Header"
+                HorizontalOptions="Center"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"/>
+
+            <Label x:Name="userPage_subtitle"
+                Text="LIBRARIANS ONLY!"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"/>
+
+            <Entry x:Name="userPage_userName"
+                Placeholder="Enter username"
+                FontSize="25"
+                WidthRequest ="245"
+                HeightRequest ="75"
+                HorizontalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="1"/>
+
+            <Entry x:Name="userPage_userPassword"
+                Placeholder="Enter password"
+                FontSize="25"
+                WidthRequest ="245"
+                HeightRequest ="75"
+                HorizontalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="2"/>
+
+            <Button x:Name="userPage_signInButton"
+                Text="Sign In"
+                FontSize="25"
+                BackgroundColor="Gold"
+                WidthRequest ="200"
+                HeightRequest ="75"
+                Grid.Row="2"
+                Grid.Column="3"/>
+
+            <!--id-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="userPage_user_id"
+                    Text="User ID"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Entry x:Name="userPage_user_idDesc"
+                Placeholder="e.g. 0123456789"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="5"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+            <!--user type-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="6"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="userPage_book_user_type"
+                    Text="Name"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Entry x:Name="userPage_book_user_typeDesc"
+                Placeholder = "e.g. Librarian"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="6"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+            <!--name-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="7"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="userPage_username"
+                    Text="Name"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Entry x:Name="userPage_usernameDesc"
+                Placeholder="e.g. Benjamin Simms"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="7"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+            <!--password-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="8"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="userPage_user_password"
+                    Text="Genre"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Entry x:Name="userPage_user_passwordDesc"
+                Placeholder="e.g. 1234567"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="8"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+
+            <Button x:Name="userPage_registerUserButton"
+                Text="Register Book"
+                FontSize="25"
+                BackgroundColor="Lime"
+                WidthRequest ="350"
+                HeightRequest ="75"
+                Grid.Row="12"
+                Grid.Column="1"/>
+
+            <Button x:Name="userPage_clearEntriesButton"
+                Text="Clear Entries"
+                FontSize="25"
+                BackgroundColor="Red"
+                WidthRequest ="350"
+                HeightRequest ="75"
+                Grid.Row="12"
+                Grid.Column="3"/>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

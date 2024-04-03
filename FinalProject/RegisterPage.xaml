@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.RegisterPage">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="registerPage_title"
+                Text="Add and Register a Book to the System!"
+                FontSize="Header"
+                HorizontalOptions="Center"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"/>
+
+            <Label x:Name="registerPage_subtitle"
+                Text="LIBRARIANS ONLY!"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"/>
+
+            <Entry x:Name="registerPage_userName"
+                Placeholder="Enter username"
+                FontSize="25"
+                WidthRequest ="245"
+                HeightRequest ="75"
+                HorizontalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="1"/>
+
+            <Entry x:Name="registerPage_userPassword"
+                Placeholder="Enter password"
+                FontSize="25"
+                WidthRequest ="245"
+                HeightRequest ="75"
+                HorizontalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="2"/>
+
+            <Button x:Name="registerPage_signInButton"
+                Text="Sign In"
+                FontSize="25"
+                BackgroundColor="Gold"
+                WidthRequest ="200"
+                HeightRequest ="75"
+                Grid.Row="2"
+                Grid.Column="3"/>
+
+            <!--id-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="registerPage_book_id"
+                    Text="Book ID"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Entry x:Name="registerPage_book_idDesc"
+                Placeholder="e.g. 0123456789"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="5"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+            <!--title-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="6"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="registerPage_book_title"
+                    Text="Title"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Entry x:Name="registerPage_book_titleDesc"
+                Placeholder = "e.g. The Bible"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="6"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+            <!--author-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="7"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="registerPage_book_author"
+                    Text="Author"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Entry x:Name="registerPage_book_authorDesc"
+                Placeholder="e.g. Jesus Christ"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="7"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+            <!--genre-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="8"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="registerPage_book_genre"
+                    Text="Genre"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Entry x:Name="registerPage_book_genreDesc"
+                Placeholder="e.g. Religion"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="8"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+            <!--publish date-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="9"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="registerPage_book_publishDate"
+                    Text="Published"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Entry x:Name="registerPage_book_publishDateDesc"
+                Placeholder="e.g. dd/mm/yyyy"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="9"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+            <!--quantity-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="10"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="registerPage_book_quantity"
+                    Text="Quantity"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Entry x:Name="registerPage_book_quantityDesc"
+                Placeholder="e.g. 7"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="10"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+
+            <Button x:Name="registerPage_registerBookButton"
+                Text="Register Book"
+                FontSize="25"
+                BackgroundColor="Lime"
+                WidthRequest ="350"
+                HeightRequest ="75"
+                Grid.Row="12"
+                Grid.Column="1"
+                Clicked="OnRegisterBookButton"/>
+
+            <Button x:Name="registerPage_clearEntriesButton"
+                Text="Clear Entries"
+                FontSize="25"
+                BackgroundColor="Red"
+                WidthRequest ="350"
+                HeightRequest ="75"
+                Grid.Row="12"
+                Grid.Column="3"
+                Clicked="OnClearEntriesButton"/>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

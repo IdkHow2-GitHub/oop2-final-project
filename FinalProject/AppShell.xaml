@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="FinalProject.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FinalProject"
+    Shell.FlyoutBehavior="Locked"
+    Title="FinalProject">
+
+    <ShellContent
+        Title="Welcome!"
+        ContentTemplate="{DataTemplate local:SearchPage}"
+        Route="SearchPage" />
+
+    <ShellContent
+        Title="Borrowed Books"
+        ContentTemplate="{DataTemplate local:ViewPage}"
+        Route="ViewPage" />
+    
+    <ShellContent
+        Title="Register a Book"
+        ContentTemplate="{DataTemplate local:RegisterPage}"
+        Route="RegisterPage" />
+
+    <ShellContent
+        Title="Register a User"
+        ContentTemplate="{DataTemplate local:UserPage}"
+        Route="UserPage" />
+
+
+</Shell>
