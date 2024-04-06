@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using FinalProject.Data;
+using Microsoft.Extensions.Logging;
 
 namespace FinalProject
 {
@@ -15,8 +16,12 @@ namespace FinalProject
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddSingleton<SqliteManager>();
+            builder.Services.AddTransient<TestDB>();
+
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

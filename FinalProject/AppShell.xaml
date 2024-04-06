@@ -26,6 +26,9 @@
         Title="Register a User"
         ContentTemplate="{DataTemplate local:UserPage}"
         Route="UserPage" />
-
+    <ShellContent
+        Title="Test DB"
+        ContentTemplate="{DataTemplate local:TestDB}"
+        Route="TestDBPage" />
 
 </Shell>

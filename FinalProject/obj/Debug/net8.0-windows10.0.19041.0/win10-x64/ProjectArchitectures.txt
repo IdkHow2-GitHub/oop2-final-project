@@ -1,1 +1,1 @@
-C:\Users\bsimm\Desktop\OOP2 VS\FinalProject\FinalProject.csproj;x64
+C:\Users\one39\source\repos\oop2-final-project\FinalProject\FinalProject.csproj;x64

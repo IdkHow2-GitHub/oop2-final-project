@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.TestDB"
+             Title="TestDB">
+    <StackLayout>
+        <ListView x:Name="listView" ItemSelected="listView_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Label Text="Title" />
+        <Entry x:Name="titleEntry" />
+
+        <Label Text="Author First Name" />
+        <Entry x:Name="authorFirstNameEntry" />
+
+        <Label Text="Genre" />
+        <Entry x:Name="genreEntry" />
+
+        <Label Text="Stock" />
+        <Entry x:Name="stockEntry" />
+
+        <Label Text="Released_year" />
+        <Entry x:Name="released_yearEntry" />
+
+        <Button Text="Save" Clicked="saveButton_Clicked" />
+    </StackLayout>
+</ContentPage>
