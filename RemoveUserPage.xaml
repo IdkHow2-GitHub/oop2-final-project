@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.RemoveUserPage">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="removeUserPage_title"
+                Text="Remove a User from the System!"
+                FontSize="Header"
+                HorizontalOptions="Center"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"/>
+
+            <Label x:Name="removeUserPage_subtitle"
+                Text="LIBRARIANS ONLY!"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"/>
+
+            <Entry x:Name="removeUserPage_userName"
+                Placeholder="Enter username"
+                FontSize="25"
+                WidthRequest ="245"
+                HeightRequest ="75"
+                HorizontalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="1"/>
+
+            <Entry x:Name="removeUserPage_userPassword"
+                Placeholder="Enter password"
+                FontSize="25"
+                WidthRequest ="245"
+                HeightRequest ="75"
+                HorizontalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="2"/>
+
+            <Button x:Name="removeUserPage_signInButton"
+                Text="Sign In"
+                FontSize="25"
+                BackgroundColor="Gold"
+                WidthRequest ="200"
+                HeightRequest ="75"
+                Grid.Row="2"
+                Grid.Column="3"/>
+
+            <Picker x:Name="removeUserPage_allUser_dropdown"
+                Background="DarkGoldenrod"
+                HorizontalOptions="Center"
+                WidthRequest="1000"
+                Grid.Row="3"
+                Grid.Column="1"
+                Grid.ColumnSpan="3">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Search for a book first!</x:String>
+                        <!--this has to be relative to the inputs from the OTHER .xaml file, as that is dependant on the csv files-->
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!--id-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="removeUserPage_user_id"
+                    Text="User ID"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Label x:Name="removeUserPage_user_idDesc"
+                Text="0000000000"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="5"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+            <!--title-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="6"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="removeUserPage_user_type"
+                    Text="Type"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Label x:Name="removeUserPage_user_typeDesc"
+                Text = "N/A"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="6"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+            <!--author-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="7"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="removeUserPage_username"
+                    Text="Name"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Label x:Name="removeUserPage_usernameDesc"
+                Text="N/A"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="7"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+            <!--genre-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="8"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="removeUserPage_password"
+                    Text="Genre"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Label x:Name="removeUserPage_passwordDesc"
+                Text="N/A"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="8"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+
+            <Button x:Name="removeUserPage_removeUserButton"
+                Text="Remove User"
+                FontSize="25"
+                BackgroundColor="Lime"
+                WidthRequest ="350"
+                HeightRequest ="75"
+                Grid.Row="12"
+                Grid.Column="1"/>
+
+            <Button x:Name="removeUserPage_clearEntriesButton"
+                Text="Clear Entries"
+                FontSize="25"
+                BackgroundColor="Red"
+                WidthRequest ="350"
+                HeightRequest ="75"
+                Grid.Row="12"
+                Grid.Column="3"/>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

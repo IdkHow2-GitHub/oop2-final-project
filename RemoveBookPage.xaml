@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject.RemoveBookPage">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="removeBookPage_title"
+                Text="Remove a Book from the System!"
+                FontSize="Header"
+                HorizontalOptions="Center"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"/>
+
+            <Label x:Name="removeBookPage_subtitle"
+                Text="LIBRARIANS ONLY!"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"/>
+
+            <Entry x:Name="removeBookPage_userName"
+                Placeholder="Enter username"
+                FontSize="25"
+                WidthRequest ="245"
+                HeightRequest ="75"
+                HorizontalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="1"/>
+
+            <Entry x:Name="removeBookPage_userPassword"
+                Placeholder="Enter password"
+                FontSize="25"
+                WidthRequest ="245"
+                HeightRequest ="75"
+                HorizontalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="2"/>
+
+            <Button x:Name="removeBookPage_signInButton"
+                Text="Sign In"
+                FontSize="25"
+                BackgroundColor="Gold"
+                WidthRequest ="200"
+                HeightRequest ="75"
+                Grid.Row="2"
+                Grid.Column="3"/>
+
+            <Picker x:Name="removeBookPage_allBooks_dropdown"
+                Background="DarkGoldenrod"
+                HorizontalOptions="Center"
+                WidthRequest="1000"
+                Grid.Row="3"
+                Grid.Column="1"
+                Grid.ColumnSpan="3">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Search for a book first!</x:String>
+                        <!--this has to be relative to the inputs from the OTHER .xaml file, as that is dependant on the csv files-->
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <!--id-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="removeBookPage_book_id"
+                    Text="Book ID"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Label x:Name="removeBookPage_book_idDesc"
+                Text="0000000000"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="5"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+            <!--title-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="6"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="removeBookPage_book_title"
+                    Text="Title"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Label x:Name="removeBookPage_book_titleDesc"
+                Text = "N/A"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="6"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+            <!--author-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="7"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="removeBookPage_book_author"
+                    Text="Author"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Label x:Name="removeBookPage_book_authorDesc"
+                Text="N/A"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="7"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+            <!--genre-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="8"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="removeBookPage_book_genre"
+                    Text="Genre"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Label x:Name="removeBookPage_book_genreDesc"
+                Text="N/A"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="8"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+            <!--publish date-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="9"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="removeBookPage_book_publishDate"
+                    Text="Published"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Label x:Name="removeBookPage_book_publishDateDesc"
+                Text="dd/mm/yyyy"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="9"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+            <!--quantity-->
+            <Border Stroke="#C49B33"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 40,40,40,40"
+                Background="#2B0B98"
+                HorizontalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="150"
+                Grid.Row="10"
+                Grid.Column="0"
+                Grid.ColumnSpan="1">
+                <Label x:Name="removeBookPage_book_quantity"
+                    Text="Quantity"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    VerticalTextAlignment ="Center"
+                    HorizontalTextAlignment ="Center"/>
+            </Border>
+            <Label x:Name="removeBookPage_book_quantityDesc"
+                Text="0"
+                FontSize="Medium"
+                VerticalTextAlignment ="Center"
+                HorizontalTextAlignment ="Start"
+                Grid.Row="10"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"/>
+
+            <Button x:Name="removeBookPage_removeBookButton"
+                Text="Remove Book"
+                FontSize="25"
+                BackgroundColor="Lime"
+                WidthRequest ="350"
+                HeightRequest ="75"
+                Grid.Row="12"
+                Grid.Column="1"/>
+
+            <Button x:Name="removeBookPage_clearEntriesButton"
+                Text="Clear Entries"
+                FontSize="25"
+                BackgroundColor="Red"
+                WidthRequest ="350"
+                HeightRequest ="75"
+                Grid.Row="12"
+                Grid.Column="3"/>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
